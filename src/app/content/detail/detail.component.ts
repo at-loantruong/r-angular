@@ -1,13 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { Component,  OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-detail',
-  templateUrl: './detail.component.html'
+  templateUrl: './detail.component.html',
+  styleUrls: ['./detail.component.css']
 })
-export class DetailComponent {
-  @Input() post: any;
+
+export class DetailComponent implements OnInit {
+
+  @Input('article') article: any;
+  @Input('select') isSelected: any;
 
   constructor() {
-    console.log(this.post);
+    //
   }
+
+  ngOnInit() {
+
+  }
+
 }

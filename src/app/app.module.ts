@@ -8,12 +8,17 @@ import { DetailComponent } from './content/detail/detail.component';
 import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, ContentComponent, SidebarComponent, FooterComponent, DetailComponent
+    AppComponent,
+    HeaderComponent, 
+    ContentComponent,
+    SidebarComponent,
+    FooterComponent, 
+    DetailComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent, HeaderComponent, ContentComponent, SidebarComponent, FooterComponent, DetailComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
