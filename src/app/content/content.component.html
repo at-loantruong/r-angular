@@ -1,0 +1,17 @@
+<div class="content column">
+  <article *ngFor = 'let lst of appList' [class.selected]="post === selectedPost">
+    <div class="post-wrapper">
+      <a class="blog-image"><img src="{{lst.src}}"></a>
+      <div class="post-content">
+        <a class="blog-title-link" href="#">
+          <h2 class="blog-title">{{lst.title}}</h2>
+        </a>
+        <div class="post-summary-wrapper">
+          <p class="post-summary">{{lst.content}}</p>
+          <button (click)="onClick(lst)">Read more...</button>
+        </div>
+      </div>
+    </div>
+  </article>
+  <app-detail [post]="selectedPost"></app-detail>
+</div>
