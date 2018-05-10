@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { DetailComponent } from './detail/detail.component';
-
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
-
 export class ContentComponent {
   appList: any[] = [ {
       "id": "1",
@@ -20,10 +18,8 @@ export class ContentComponent {
       "src": '../assets/images/image-2.png',
       "content": 'Arista, percolator, cream, aromatic, fair trade, breve body instant lungo blue mountain cappuccino. Americano aroma mug espresso latte crema milk redeye acerbic.'
    } ];
-
  selectedPost = {};
  isSelected = false;
-
  onClick(lst){
    this.selectedPost = lst;
    this.isSelected = true;
