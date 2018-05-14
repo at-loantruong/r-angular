@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor = 'let emp of employees' [ngSwitch]="emp.position">
+      <tr *ngFor = 'let emp of employees'>
         <td class="avatar">
           <a href="javascript:void(0)" (click)="onClick(emp)">
             <img src="{{emp.avatar}}" URLImage alt="...">
@@ -20,11 +20,7 @@
             </span>
           </a>
         </td>
-        <td *ngSwitchCase="'SE'" class="blue">{{emp.position}}</td>
-        <td *ngSwitchCase="'ASE'" class="">{{emp.position}}</td>
-        <td *ngSwitchCase="'SSE'" class="violet">{{emp.position}}</td>
-        <td *ngSwitchCase="'Intern'" class="yellow">{{emp.position}}</td>
-        <td *ngSwitchDefault class="gold">{{emp.position}}</td>
+        <td class="text-center" [class]="emp.position | position">{{ emp.position }}</td>
         <td>{{emp.type}}</td>
         <td>{{emp.email}}</td>
         <td phone>{{emp.phone}}</td>

@@ -4,8 +4,8 @@ import { Directive, ElementRef,  Input , OnInit} from '@angular/core';
   selector: '[phone]'
 })
 
-export class PhoneDirective implements OnInit {
-  @Input() phone: string;
+export class PhoneDirective {
+  @Input('phone') phone: string;
 
   constructor(private el: ElementRef) { }
 
@@ -14,7 +14,10 @@ export class PhoneDirective implements OnInit {
   }
 
   ngAfterViewInit() {
-
+    if(!this.phone) {
+      this.el.nativeElement.innerHTML = 'Empty';
+      this.el.nativeElement.style = 'font-style: italic; opacity: 0.7;';
+     }
   }
 
 }

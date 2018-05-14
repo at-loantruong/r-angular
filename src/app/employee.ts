@@ -5,5 +5,5 @@ export class Employee {
   position: string;
   type: string;
   email: string;
-  phone: number;
+  phone: string;
 }
