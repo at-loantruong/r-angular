@@ -28,16 +28,16 @@
   font-weight: 700;
 }
 .blue {
-  background: blue;
+  color: blue;
 }
 .yellow {
-  background: yellow;
+  color: yellow;
 }
 .gold {
-  background: gold;
+  color: gold;
 }
 .violet {
-  background: violet;
+  color: violet;
 }
 a {
   text-decoration: none;
