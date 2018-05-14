@@ -14,9 +14,9 @@ export class ImageDirective implements OnInit {
   }
 
   ngAfterViewInit() {
-    if(!this.URLImage) {
-     this.el.nativeElement.src = "../assets/images/anonymous.png";
-   }
+    if(!this.el.nativeElement.getAttribute('src')) {
+      this.el.nativeElement.setAttribute('src', '../assets/images/anonymous.png');
+    }
   }
 
 }

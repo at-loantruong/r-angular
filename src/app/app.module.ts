@@ -8,6 +8,7 @@ import { DetailComponent } from './content/detail/detail.component';
 import { ImageDirective } from './directive/image.directive';
 import { EllipsisPipe } from './pipe/ellipsis.pipe';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailsComponent } from './employee-list/details/details.component';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AppComponent } from './app.component';
     DetailComponent,
     ImageDirective,
     EllipsisPipe,
-    EmployeeListComponent
+    EmployeeListComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule

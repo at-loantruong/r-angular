@@ -1,0 +1,10 @@
+.info {
+  position: relative;
+}
+.info label {
+  position: absolute;
+  left: 0;
+}
+.info span {
+  margin-left: 20%;
+}

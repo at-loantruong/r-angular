@@ -1,0 +1,27 @@
+<div *ngIf="selectedEmp" class="post-wrapper" [class.hidden]="isSelected === false">
+  <h3>Company's information</h3>
+  <div class="info">
+    <label>Employee Code</label>
+    <span>{{selectedEmp.code}}</span>
+  </div>
+  <div class="info">
+    <label>Employee Name</label>
+    <span>{{selectedEmp.name}}</span>
+  </div>
+  <div class="info">
+    <label>Employee Type</label>
+    <span>{{selectedEmp.type}}</span>
+  </div>
+  <div class="info">
+    <label>Position</label>
+    <span>{{selectedEmp.position}}</span>
+  </div>
+  <div class="info">
+    <label>Email</label>
+    <span>{{selectedEmp.email}}</span>
+  </div>
+  <div class="info">
+    <label>Phone</label>
+    <span>{{selectedEmp.phone}}</span>
+  </div>
+</div>

@@ -1,10 +1,8 @@
 <div class="content column">
-  <table class="list-employees">
+  <table class="list-employees" [class.hidden]="isSelected">
     <thead>
       <tr>
-        <th>Employee Code</th>
-        <th>Employee Name</th>
-        <th>Avatar</th>
+        <th>Employee</th>
         <th>Position</th>
         <th>Employee Type</th>
         <th>Employee Email</th>
@@ -13,9 +11,15 @@
     </thead>
     <tbody>
       <tr *ngFor = 'let emp of employees' [ngSwitch]="emp.position">
-        <td>{{emp.code}}</td>
-        <td>{{emp.name}}</td>
-        <td class="avatar"><img [URLImage]="employees.avatar" src="{{emp.avatar}}" alt="..."></td>
+        <td class="avatar">
+          <a href="javascript:void(0)" (click)="onClick(emp)">
+            <img src="{{emp.avatar}}" URLImage alt="...">
+            <span>
+              <strong>{{emp.name}} </strong><br>
+              <small>{{emp.code}} </small>
+            </span>
+          </a>
+        </td>
         <td *ngSwitchCase="'SE'" class="blue">{{emp.position}}</td>
         <td *ngSwitchCase="'ASE'" class="">{{emp.position}}</td>
         <td *ngSwitchCase="'SSE'" class="violet">{{emp.position}}</td>
@@ -27,4 +31,5 @@
       </tr>
     </tbody>
   </table>
+  <employee-details [selectedEmp]="selectedEmp" [select]="isSelected"></employee-details>
 </div>
