@@ -7,7 +7,7 @@
 .post-content {
   padding: 35px;
 }
-.blog-title-link {
+.post-title-link {
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
   color: #333;
@@ -22,7 +22,7 @@
   font-size: 14px;
   line-height: 22px;
 }
-.blog-image img {
+.post-image img {
   width: 100%;
   max-height: 300px;
 }

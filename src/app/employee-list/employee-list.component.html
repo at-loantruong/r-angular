@@ -1,0 +1,30 @@
+<div class="content column">
+  <table class="list-employees">
+    <thead>
+      <tr>
+        <th>Employee Code</th>
+        <th>Employee Name</th>
+        <th>Avatar</th>
+        <th>Position</th>
+        <th>Employee Type</th>
+        <th>Employee Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = 'let emp of employees' [ngSwitch]="emp.position">
+        <td>{{emp.code}}</td>
+        <td>{{emp.name}}</td>
+        <td class="avatar"><img [URLImage]="employees.avatar" src="{{emp.avatar}}" alt="..."></td>
+        <td *ngSwitchCase="'SE'" class="blue">{{emp.position}}</td>
+        <td *ngSwitchCase="'ASE'" class="">{{emp.position}}</td>
+        <td *ngSwitchCase="'SSE'" class="violet">{{emp.position}}</td>
+        <td *ngSwitchCase="'Intern'" class="yellow">{{emp.position}}</td>
+        <td *ngSwitchDefault class="gold">{{emp.position}}</td>
+        <td>{{emp.type}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

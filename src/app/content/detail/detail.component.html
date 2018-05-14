@@ -1,8 +1,8 @@
 <div *ngIf="article" class="post-wrapper" [class.hidden]="isSelected === false">
-  <a class="blog-image"><img src="{{article.src}}"></a>
+  <a class="post-image"><img src="{{article.src}}" alt="..."></a>
   <div class="post-content">
-    <a class="blog-title-link" href="javascript:void(0)">
-      <h2 class="blog-title">{{article.title}}</h2>
+    <a class="post-title-link" href="javascript:void(0)">
+      <h2 class="post-title">{{article.title}}</h2>
     </a>
     <div class="post-summary-wrapper">
       <p class="post-summary">{{article.content}}</p>

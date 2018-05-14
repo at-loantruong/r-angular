@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class ContentComponent {
-
-  appList: any[] = [ 
+  tabIndex: number = 1;
+  appList: any[] = [
     {
       "id": '1',
       "title": 'Coffee sugar, chicory seasonal espresso barista americano',
@@ -30,5 +30,5 @@ export class ContentComponent {
     this.selectedPost = post;
     this.isSelected = true;
   }
-  
+
 }

@@ -5,15 +5,22 @@ import { ContentComponent } from './content/content.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailComponent } from './content/detail/detail.component';
+import { ImageDirective } from './directive/image.directive';
+import { EllipsisPipe } from './pipe/ellipsis.pipe';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { AppComponent } from './app.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent, 
+    HeaderComponent,
     ContentComponent,
     SidebarComponent,
-    FooterComponent, 
-    DetailComponent
+    FooterComponent,
+    DetailComponent,
+    ImageDirective,
+    EllipsisPipe,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule
