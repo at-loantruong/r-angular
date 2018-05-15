@@ -1,4 +1,5 @@
 <div class="content column">
+  <p list-member></p>
   <table class="list-employees" [class.hidden]="isSelected">
     <thead>
       <tr>
@@ -12,7 +13,7 @@
     <tbody>
       <tr *ngFor = 'let emp of employees'>
         <td class="avatar">
-          <a href="javascript:void(0)" (click)="onClick(emp)">
+          <a (click)="onClick(emp)">
             <img src="{{emp.avatar | avatar }}" alt="...">
             <span>
               <strong>{{emp.name}} </strong><br>
