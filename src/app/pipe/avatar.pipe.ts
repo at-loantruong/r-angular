@@ -4,15 +4,13 @@ import { Pipe, PipeTransform } from '@angular/core'
 	name: 'avatar'
 })
 
-export class AvatarPipe implements PipeTransform{
+export class AvatarPipe implements PipeTransform {
 	transform(image : string) {
-  console.log(image);
-
-	if (!image) {
-		return '../assets/images/anonymous.png';
-	} else {
-		return image;
-		}
-	}
+    if (!image) {
+      return '../assets/images/anonymous.png';
+    } else {
+      return image;
+    }
+  }
 
 }
