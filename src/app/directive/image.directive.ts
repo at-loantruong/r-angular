@@ -1,4 +1,4 @@
-import { Directive, ElementRef,  Input , OnInit} from '@angular/core';
+import { Directive, ElementRef,  Input , OnInit } from '@angular/core';
 
 @Directive({
   selector: '[URLImage]'
@@ -14,7 +14,7 @@ export class ImageDirective implements OnInit {
   }
 
   ngAfterViewInit() {
-    if(!this.el.nativeElement.getAttribute('src')) {
+    if (!this.el.nativeElement.getAttribute('src')) {
       this.el.nativeElement.setAttribute('src', '../assets/images/anonymous.png');
     }
   }

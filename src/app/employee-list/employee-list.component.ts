@@ -20,7 +20,7 @@ export class EmployeeListComponent {
   selectedEmp = {}
   isSelected = false;
 
-  onClick(emp){
+  onClick(emp) {
     this.selectedEmp = emp;
     this.isSelected = true;
   }

@@ -9,7 +9,7 @@ export class PositionPipe implements PipeTransform {
   constructor () { }
 
   transform(position: string) {
-   switch(position) {
+   switch (position) {
     case 'SSE' :
       return 'violet'
     case 'SE' :

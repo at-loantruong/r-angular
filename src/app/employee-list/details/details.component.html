@@ -27,7 +27,7 @@
     </div>
   </div>
   <div class="card">
-    <img src="{{selectedEmp.avatar}}" URLImage alt="...">
+    <img src="{{selectedEmp.avatar | avatar}}" alt="...">
     <p>{{selectedEmp.name}} </p>
     <p>{{selectedEmp.code}} </p>
   </div>
@@ -52,7 +52,7 @@
             </span>
           </a>
         </td>
-        <td class="text-center" [class]="emp.position | position">{{ emp.position }}</td>
+        <td [class]="emp.position | position">{{ emp.position }}</td>
         <td>{{emp.type}}</td>
         <td>{{emp.email}}</td>
         <td phone>{{emp.phone}}</td>

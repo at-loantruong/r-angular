@@ -7,9 +7,11 @@ import { FooterComponent } from './footer/footer.component';
 import { DetailComponent } from './content/detail/detail.component';
 import { ImageDirective } from './directive/image.directive';
 import { PhoneDirective } from './directive/phone.directive';
+import { PositionDirective } from './directive/position.directive';
 import { EllipsisPipe } from './pipe/ellipsis.pipe';
 import { PositionPipe } from './pipe/position.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
+import { AvatarPipe } from './pipe/avatar.pipe';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-list/details/details.component';
 import { AppComponent } from './app.component';
@@ -24,9 +26,11 @@ import { AppComponent } from './app.component';
     DetailComponent,
     ImageDirective,
     PhoneDirective,
+    PositionDirective,
     EllipsisPipe,
     PositionPipe,
     FilterPipe,
+    AvatarPipe,
     EmployeeListComponent,
     EmployeeDetailsComponent
   ],
