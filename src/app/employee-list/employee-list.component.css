@@ -22,6 +22,9 @@
   width: 30px;
   height: 30px;
   float: left;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
 }
 .avatar span, .avatar small {
   margin-left: 15px;

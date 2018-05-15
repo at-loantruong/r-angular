@@ -14,7 +14,7 @@ export class PhoneDirective {
   }
 
   ngAfterViewInit() {
-    if(!this.phone) {
+    if(!this.el.nativeElement.innerHTML) {
       this.el.nativeElement.innerHTML = 'Empty';
       this.el.nativeElement.style = 'font-style: italic; opacity: 0.7;';
      }
