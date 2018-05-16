@@ -1,5 +1,5 @@
 <div class="content column">
-  <table class="list-employees">
+  <table class="list-employees" [class.hidden]="isSelected">
     <thead>
       <tr>
         <th>Employee</th>
@@ -27,4 +27,5 @@
       </tr>
     </tbody>
   </table>
+  <employee-details [detail]="detail" [same]="same" [select]="isSelected"></employee-details>
 </div>

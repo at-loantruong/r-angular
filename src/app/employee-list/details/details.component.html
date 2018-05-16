@@ -1,35 +1,35 @@
-<div *ngIf="selectedEmp" class="post-wrapper" [class.hidden]="isSelected === false">
+<div *ngIf="detail" class="post-wrapper" [class.hidden]="isSelected === false">
   <h3>Company's information</h3>
   <div class="detail-info">
     <div class="info">
       <label>Employee Code</label>
-      <span>{{selectedEmp.code}}</span>
+      <span>{{detail.code}}</span>
     </div>
     <div class="info">
       <label>Employee Name</label>
-      <span>{{selectedEmp.name}}</span>
+      <span>{{detail.name}}</span>
     </div>
     <div class="info">
       <label>Employee Type</label>
-      <span>{{selectedEmp.type}}</span>
+      <span>{{detail.type}}</span>
     </div>
     <div class="info">
       <label>Position</label>
-      <span>{{selectedEmp.position}}</span>
+      <span>{{detail.position}}</span>
     </div>
     <div class="info">
       <label>Email</label>
-      <span>{{selectedEmp.email}}</span>
+      <span>{{detail.email}}</span>
     </div>
     <div class="info">
       <label>Phone</label>
-      <span>{{selectedEmp.phone}}</span>
+      <span>{{detail.phone}}</span>
     </div>
   </div>
   <div class="card">
-    <img src="{{selectedEmp.avatar | avatar}}" alt="...">
-    <p>{{selectedEmp.name}} </p>
-    <p>{{selectedEmp.code}} </p>
+    <img src="{{detail.avatar | avatar}}" alt="...">
+    <p>{{detail.name}} </p>
+    <p>{{detail.code}} </p>
   </div>
   <table class="list-employees">
     <thead>
@@ -42,7 +42,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor = 'let emp of (employees | filter: selectedEmp.position :selectedEmp.code)'>
+      <tr *ngFor = 'let emp of same'>
         <td class="avatar">
           <a href="javascript:void(0)" (click)="onClick(emp)">
             <img src="{{emp.avatar}}" URLImage alt="...">

@@ -12,11 +12,14 @@ export class EmployeeDetailsComponent implements OnInit {
   employees = EMPLOYEES;
   @Input('selectedEmp') selectedEmp;
   @Input('select') isSelected: any;
+  @Input('detail') detail: any;
+  @Input('same') same: any;
 
   constructor() {
   }
 
   ngOnInit() {
+
   }
 
 }

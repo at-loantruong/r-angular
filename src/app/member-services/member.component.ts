@@ -10,15 +10,25 @@ import { Employee } from "../employee";
  export class MemberComponent implements OnInit {
     data : any;
     members : any;
-    constructor (private memberSerivce: MembersService) {
+    selectedEmp = {}
+    isSelected = false;
+    code: any;
+    detail: any;
+    same: any;
 
-    }
+
+    constructor (private memberSerivce: MembersService) { }
 
     getList(): void {
       this.memberSerivce.getList().subscribe(data => {
         this.members = data;
-        console.log (data);
       });
+    }
+
+    onClick(emp): void {
+      this.isSelected = true;
+      this.detail  = this.memberSerivce.getDetails(this.members, emp.code);
+      this.same = this.memberSerivce.getSameMember(this.members, emp.position);
     }
 
     ngOnInit() {
