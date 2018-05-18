@@ -21,7 +21,8 @@ export class FormModelComponent {
       ]),
       code: new FormControl('', [
         Validators.required,
-        Validators.minLength(6)
+        Validators.maxLength(6),
+        Validators.pattern("^(AT)[0-9]{4}$")
       ]),
       skill: new FormControl('', Validators.required),
       citizen: new FormControl('', Validators.required),
