@@ -9,7 +9,8 @@ import { EMPLOYEES } from '../mock-employees';
 
 export class EmployeeListComponent {
   employees = EMPLOYEES;
-
+  selectedEmp = {};
+  isSelected = false;
   constructor() {
     //
   }
@@ -17,8 +18,6 @@ export class EmployeeListComponent {
   ngOnInit() {
 
   }
-  selectedEmp = {}
-  isSelected = false;
 
   onClick(emp) {
     this.selectedEmp = emp;

@@ -16,7 +16,6 @@ import { Employee } from "../employee";
     detail: any;
     same: any;
 
-
     constructor (private memberSerivce: MembersService) { }
 
     getList(): void {

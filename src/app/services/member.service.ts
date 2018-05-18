@@ -20,6 +20,7 @@ import { map } from 'rxjs/operators';
   public getDetails(list: any, code: any) {
     return list.find(member => member.code === code);
   }
+
   public getSameMember(list: any, position: any) {
     return list.filter(member => member.position === position);
   }
