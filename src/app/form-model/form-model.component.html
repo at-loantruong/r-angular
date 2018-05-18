@@ -1,0 +1,43 @@
+<form [formGroup]="demoModelForm" (ngSubmit)="onSubmit()">
+  <h2>Personal infomation</h2>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label>Birthday</label>
+    <input type="date" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Gender: </label>
+    <input type="radio" value="Male" formControlName="gender"> Male
+    <input type="radio" value="Female" formControlName="gender"> Female
+    <input type="radio" value="Other" formControlName="gender"> Other
+  </div>
+  <h2>Company infomation</h2>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" class="form-control" formControlName="email">
+  </div>
+  <div class="form-group">
+    <label>Code</label>
+    <input type="text" class="form-control" formControlName="code">
+  </div>
+  <div class="form-group">
+    <label>Skill</label>
+    <input type="text" class="form-control" formControlName="skill">
+  </div>
+  <div class="form-group">
+    <label>Citizen</label>
+    <select name="citizen" formControlName="citizen" (change)="showCertificate($event)">
+      <option value="0" disabled selected>Select your option</option>
+      <option value="1">Vietnam</option>
+      <option value="2">Japan</option>
+    </select>
+  </div>
+  <div *ngIf="showDiv" class="form-group">
+    <label>Certificate</label>
+    <input type="text" class="form-control" formControlName="certificate">
+  </div>
+  <button type="submit" class="btn btn-default" [disabled]="!demoModelForm.valid">Submit</button>
+</form>
