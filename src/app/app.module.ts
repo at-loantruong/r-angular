@@ -12,6 +12,8 @@ import { EmployeeDetailsComponent } from './employee-list/details/details.compon
 import { HttpClientModule } from '@angular/common/http';
 import { MemberComponent } from './member-services/member.component';
 import { MembersService } from './services/member.service'
+import { FormTemplateComponent} from './form-template/form-template.component'
+import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -26,11 +28,13 @@ import { AppComponent } from './app.component';
     Pipe,
     EmployeeListComponent,
     EmployeeDetailsComponent,
-    MemberComponent
+    MemberComponent,
+    FormTemplateComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [MembersService],
   bootstrap: [AppComponent]
