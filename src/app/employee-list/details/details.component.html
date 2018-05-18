@@ -1,0 +1,62 @@
+<div *ngIf="detail" class="post-wrapper" [class.hidden]="isSelected === false">
+  <h3>Company's information</h3>
+  <div class="detail-info">
+    <div class="info">
+      <label>Employee Code</label>
+      <span>{{detail.code}}</span>
+    </div>
+    <div class="info">
+      <label>Employee Name</label>
+      <span>{{detail.name}}</span>
+    </div>
+    <div class="info">
+      <label>Employee Type</label>
+      <span>{{detail.type}}</span>
+    </div>
+    <div class="info">
+      <label>Position</label>
+      <span>{{detail.position}}</span>
+    </div>
+    <div class="info">
+      <label>Email</label>
+      <span>{{detail.email}}</span>
+    </div>
+    <div class="info">
+      <label>Phone</label>
+      <span>{{detail.phone}}</span>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{detail.avatar | avatar}}" alt="...">
+    <p>{{detail.name}} </p>
+    <p>{{detail.code}} </p>
+  </div>
+  <table class="list-employees">
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Position</th>
+        <th>Employee Type</th>
+        <th>Employee Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = 'let emp of same'>
+        <td class="avatar">
+          <a href="javascript:void(0)" (click)="onClick(emp)">
+            <img src="{{emp.avatar}}" URLImage alt="...">
+            <span>
+              <strong>{{emp.name}} </strong><br>
+              <small>{{emp.code}} </small>
+            </span>
+          </a>
+        </td>
+        <td [class]="emp.position | position">{{ emp.position }}</td>
+        <td>{{emp.type}}</td>
+        <td>{{emp.email}}</td>
+        <td phone>{{emp.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

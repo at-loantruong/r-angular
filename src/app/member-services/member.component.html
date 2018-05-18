@@ -1,0 +1,31 @@
+<div class="content column">
+  <table class="list-employees" [class.hidden]="isSelected">
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Position</th>
+        <th>Employee Type</th>
+        <th>Employee Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = 'let emp of members'>
+        <td class="avatar">
+          <a (click)="onClick(emp)">
+            <img src="{{emp.avatar | avatar }}" alt="...">
+            <span>
+              <strong>{{emp.name}} </strong><br>
+              <small>{{emp.code}} </small>
+            </span>
+          </a>
+        </td>
+        <td [class]="emp.position" position>{{ emp.position }}</td>
+        <td>{{emp.type}}</td>
+        <td>{{emp.email}}</td>
+        <td phone>{{emp.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <employee-details [detail]="detail" [same]="same" [select]="isSelected"></employee-details>
+</div>
