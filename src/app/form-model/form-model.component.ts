@@ -26,6 +26,7 @@ export class FormModelComponent {
       ]),
       skill: new FormControl('', Validators.required),
       citizen: new FormControl('', Validators.required),
+      certificate: new FormControl('', Validators.required),
     })
   }
 
