@@ -21,8 +21,8 @@
       </div>
       <button type="submit" class="btn btn-default" [disabled]="templateForm.invalid">Submit</button>
     </div>
-    <div class="submitted-message" *ngIf="templateForm.submitted">
-      <p>You've submitted your, {{ templateForm.value.email }}!</p>
-    </div>
   </form>
+  <div class="submitted-message" *ngIf="templateForm.submitted">
+    <p>You've submitted your, {{ templateForm.value.email }}!</p>
+  </div>
 </div>

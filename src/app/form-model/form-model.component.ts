@@ -10,6 +10,7 @@ export class FormModelComponent {
 
   demoModelForm: any;
   showDiv: any;
+  submittedForm: any;
 
   constructor () {
     this.demoModelForm = new FormGroup({
@@ -32,6 +33,10 @@ export class FormModelComponent {
 
   showCertificate(event: any) {
     this.showDiv = event.srcElement && event.srcElement.value === '1';
+  }
+
+  onSubmit() {
+    this.submittedForm = this.demoModelForm.value;
   }
 
 }

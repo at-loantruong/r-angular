@@ -51,16 +51,19 @@ label {
 }
 .btn-default {
   color: #fff;
-  background-color: green;
+  background-color: #555;
   border-color: #ccc;
   padding: 10px 30px;
 }
 .button:disabled {
   background: gray ! important;
 }
-.ng-valid {
+.ng-valid.form-control {
   border: 1px solid green;
 }
 input[type="radio"] {
   margin-left: 70px;
+}
+.ng-valid .btn-default {
+  background-color: green;
 }
