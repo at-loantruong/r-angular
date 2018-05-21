@@ -27,12 +27,19 @@ export class FormModelComponent {
       ]),
       skill: new FormControl('', Validators.required),
       citizen: new FormControl('', Validators.required),
-      certificate: new FormControl(''),
+      certificate: new FormControl('', Validators.required),
     })
   }
 
   showCertificate(event: any) {
     this.showDiv = event.srcElement && event.srcElement.value === '1';
+    if (this.showDiv) {
+      this.demoModelForm.controls['certificate'].setValidators([Validators.required]);
+      this.demoModelForm.controls['certificate'].updateValueAndValidity()
+    } else {
+      this.demoModelForm.controls['certificate'].clearValidators()
+      this.demoModelForm.controls['certificate'].updateValueAndValidity()
+    }
   }
 
   onSubmit() {
