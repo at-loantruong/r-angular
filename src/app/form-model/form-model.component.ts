@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-form-model',
@@ -11,8 +11,9 @@ export class FormModelComponent {
   demoModelForm: any;
   showDiv: boolean;
   submittedForm: any;
+  skills: any[] = [];
 
-  constructor () {
+  constructor (private fb: FormBuilder) {
     this.demoModelForm = new FormGroup({
       name: new FormControl('', Validators.required),
       gender: new FormControl('', Validators.required),
@@ -25,11 +26,28 @@ export class FormModelComponent {
         Validators.maxLength(6),
         Validators.pattern("^(AT)[0-9]{4}$")
       ]),
-      skill: new FormControl('', Validators.required),
+      skills: this.fb.array([this.initItem()]),
       citizen: new FormControl('', Validators.required),
       certificate: new FormControl('', Validators.required),
     })
   }
+
+  initItem() {
+    return this.fb.group({
+      skill: ['', Validators.required]
+    });
+  }
+
+  addSkill () {
+    const control  = this.demoModelForm.controls['skills'] as FormArray;
+    control.push(this.initItem());
+  }
+
+  removeSkill (index: number) {
+    const control  = this.demoModelForm.get('skills') as FormArray;
+    control.removeAt(index);
+  }
+
 
   showCertificate(event: any) {
     this.showDiv = event.srcElement && event.srcElement.value === '1';
