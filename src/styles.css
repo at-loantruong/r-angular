@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 0 30px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+.form-group, h2, button {
+  margin: 0 20px;
+}
+.form-info h1 {
+  padding: 15px 20px;
+  margin: 0;
+  background: green;
+  text-transform: uppercase;
+  color: #fff;
+}
+.form-info h2 {
+  padding: 20px 0;
+}
+.form-control, select {
+  display: block;
+  width: 100%;
+  height: 34px;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+a.form-control {
+  border: 0;
+  box-shadow: none;
+  text-decoration: underline;
+  margin: 0;
+  cursor: pointer;
+  color: green;
+}
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn-default {
+  color: #fff;
+  background-color: #555;
+  border-color: #ccc;
+  padding: 10px 30px;
+}
+.button:disabled {
+  background: gray ! important;
+}
+.ng-valid.form-control {
+  border: 1px solid green;
+}
+.ng-valid .form-control, .ng-valid select {
+  border: 1px solid green;
+}
+input[type="radio"] {
+  margin-left: 70px;
+}
+.ng-valid .btn-default {
+  background-color: green;
+}
